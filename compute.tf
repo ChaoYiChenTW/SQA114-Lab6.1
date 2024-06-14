@@ -21,7 +21,7 @@ resource "aws_instance" "web2" {
 }
 
 
-resource "aws_instance" "web2" {
+resource "aws_instance" "jenkins_controller" {
   ami           = "ami-0440d3b780d96b29d" # Amazon Linux 2 AMI (HVM)
   instance_type = "t2.micro"
   subnet_id     = aws_subnet.main_b.id
@@ -32,7 +32,7 @@ resource "aws_instance" "web2" {
   }
 }
 
-resource "aws_instance" "web2" {
+resource "aws_instance" "testing" {
   ami           = "ami-0440d3b780d96b29d" # Amazon Linux 2 AMI (HVM)
   instance_type = "t2.micro"
   subnet_id     = aws_subnet.main_b.id
@@ -44,7 +44,7 @@ resource "aws_instance" "web2" {
 }
 
 
-resource "aws_instance" "web2" {
+resource "aws_instance" "staging" {
   ami           = "ami-0440d3b780d96b29d" # Amazon Linux 2 AMI (HVM)
   instance_type = "t2.micro"
   subnet_id     = aws_subnet.main_b.id
